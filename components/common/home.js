@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronRight, ArrowLeft } from 'lucide-react';
 import Galaxy from '../../ui/bg';
+import Link from 'next/link';
 const agents = [
   { 
     id: "fortuna", 
@@ -182,8 +183,9 @@ const NoverisHomepage = () => {
             const position = getHeptagonPosition(index, radius);
             
             return (
+              <Link href={`/chat/${agent.id}`} key={agent.id}>
               <div
-                key={agent.id}
+                
                 className={`absolute transform -translate-x-1/2 -translate-y-1/2 transition-all duration-1000 hover:scale-110 cursor-pointer ${
                   isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
                 }`}
@@ -222,6 +224,7 @@ const NoverisHomepage = () => {
                   </div>
                 </div>
               </div>
+              </Link>
             );
           })}
         </div>
