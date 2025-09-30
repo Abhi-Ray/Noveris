@@ -39,9 +39,9 @@ const agents = [
   { 
     id: "athena", 
     label: "Athena", 
-    specialty: "Government Tender & Procurement Intelligence", 
+       specialty: "Startup & Venture Intelligence", 
     img: "/asset/agent/athena.webp",
-    description: "Access insights on public contracts, bids, and tender opportunities. Perfect for businesses participating in government projects and procurement processes.",
+   description: "Monitor emerging startups, funding rounds, and innovation trends. Ideal for venture capitalists, accelerators, and entrepreneurs.",
     origin: "Greek"
   },
   { 
@@ -56,8 +56,10 @@ const agents = [
     id: "odin", 
     label: "Odin", 
     specialty: "Startup & Venture Intelligence", 
+    specialty: "Government Tender & Procurement Intelligence", 
     img: "/asset/agent/odin.webp",
-    description: "Monitor emerging startups, funding rounds, and innovation trends. Ideal for venture capitalists, accelerators, and entrepreneurs.",
+    
+     description: "Access insights on public contracts, bids, and tender opportunities. Perfect for businesses participating in government projects and procurement processes.",
     origin: "Norse"
   }
 ];

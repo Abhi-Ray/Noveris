@@ -93,14 +93,15 @@ const NoverisChatPage = ({ agent = "odin" }) => {
       ]
     },
     { 
-      id: "athena", 
-      name: "Athena", 
+      id: "odin", 
+      name: "Odin", 
       specialty: "Government Tender & Procurement Intelligence", 
-      avatar: "/asset/agent/athena.webp",
-      greeting: "Greetings! I'm Athena, your Procurement Intelligence Agent.",
+      avatar: "/asset/agent/odin.webp",
+
+      greeting: "Greetings! I'm Odin, your Procurement Intelligence Agent.",
       description: "I help you navigate government contracts, tender opportunities, and procurement processes.",
       welcomeMessage: "Let's discuss tender opportunities, government contracts, or procurement strategies.",
-      origin: "Greek",
+      origin: "Norse",
       samplePrompts: [
         "Find government tenders related to IT infrastructure",
         "What are the upcoming procurement opportunities in defense?",
@@ -125,14 +126,16 @@ const NoverisChatPage = ({ agent = "odin" }) => {
       ]
     },
     { 
-      id: "odin", 
-      name: "Odin", 
+     
+       id: "athena", 
+      name: "Athena", 
       specialty: "Startup & Venture Intelligence", 
-      avatar: "/asset/agent/odin.webp",
-      greeting: "Hello! I'm Odin, your Venture Intelligence Agent.",
+      avatar: "/asset/agent/athena.webp",
+
+      greeting: "Hello! I'm Athena, your Venture Intelligence Agent.",
       description: "I track startup ecosystems, funding rounds, and emerging business opportunities.",
       welcomeMessage: "Ready to explore startup trends, funding insights, or venture opportunities?",
-      origin: "Norse",
+      origin: "Greek",
       samplePrompts: [
         "Show me the latest funding rounds in AI startups",
         "What are the hottest startup sectors right now?",
@@ -154,11 +157,7 @@ const NoverisChatPage = ({ agent = "odin" }) => {
     { id: 6, title: "Sector Analysis", date: "Sep 19", time: "1:30 PM" },
   ];
 
-  const models = [
-    { id: 'mortal', name: 'Mortal', description: 'Basic intelligence' },
-    { id: 'demi', name: 'Demi', description: 'Enhanced capabilities' },
-    { id: 'god', name: 'God', description: 'Maximum intelligence' }
-  ];
+ 
 
   const handleSendMessage = () => {
     if (message.trim()) {
@@ -316,7 +315,7 @@ const NoverisChatPage = ({ agent = "odin" }) => {
               </div>
               <div className="flex-1 text-left">
                 <p className="text-sm font-medium text-zinc-200">John Doe</p>
-                <p className="text-xs text-zinc-500">Credits: 2,450</p>
+                <p className="text-xs text-zinc-500">Tier: Mortal</p>
               </div>
               <ChevronDown className="h-4 w-4 text-zinc-500" />
             </button>
@@ -474,35 +473,7 @@ const NoverisChatPage = ({ agent = "odin" }) => {
 
                 {/* Right side - Model selector and send */}
                 <div className="flex items-center space-x-3">
-                  {/* Model Selector */}
-                  <div className="relative">
-                    <button
-                      onClick={() => setModelMenuOpen(!modelMenuOpen)}
-                      className="flex items-center space-x-2 px-3 py-1.5 bg-zinc-800 hover:bg-zinc-700 rounded-lg transition-colors text-sm"
-                    >
-                      <span className="capitalize font-medium text-zinc-300">{selectedModel}</span>
-                      <ChevronDown className="h-3 w-3 text-zinc-500" />
-                    </button>
-
-                    {modelMenuOpen && (
-                      <div className="absolute bottom-full mb-2 right-0 bg-zinc-900 border border-zinc-700 rounded-lg shadow-xl py-2 min-w-40">
-                        {models.map((model) => (
-                          <button
-                            key={model.id}
-                            onClick={() => {
-                              setSelectedModel(model.id);
-                              setModelMenuOpen(false);
-                            }}
-                            className="w-full text-left px-4 py-2 hover:bg-zinc-800 transition-colors"
-                          >
-                            <div className="font-medium text-sm text-zinc-200">{model.name}</div>
-                            <div className="text-xs text-zinc-500">{model.description}</div>
-                          </button>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-
+                 
                   {/* Send Button */}
                   <button
                     onClick={handleSendMessage}
